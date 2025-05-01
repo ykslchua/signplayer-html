@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image with JSON Text Overlay</title>
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .overlay-text {
+    position: absolute;
+    top: 80px;
+    left: 220px;
+    color: #ffffff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 88px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.7);
+    transition: all 0.3s ease-in-out;
+	transform: rotate(-5deg); 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+    <img src="billboard.jpg" alt="Overlay Image" width="800">
+    <div class="overlay-text" id="overlayText">Loading text...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
