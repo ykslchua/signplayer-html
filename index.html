@@ -4,33 +4,46 @@
   <meta charset="UTF-8">
   <title>Image with JSON Text Overlay</title>
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
     .image-container {
       position: relative;
-      display: inline-block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .overlay-text {
-    position: absolute;
-    top: 80px;
-    left: 220px;
-    color: #ffffff;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    font-size: 88px;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.0);
-    padding: 12px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.7);
-    transition: all 0.3s ease-in-out;
-	transform: rotate(-5deg); 
+      position: absolute;
+      top: 15%;     /* Responsive vertical position */
+      left: 30%;    /* Responsive horizontal position */
+      color: #ffffff;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-size: 6vw; /* Responsive font size based on viewport width */
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.0);
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.7);
+      transition: all 0.3s ease-in-out;
+      transform: rotate(-5deg);
     }
   </style>
 </head>
 <body>
 
   <div class="image-container">
-    <img src="billboard.jpg" alt="Overlay Image" width="800">
+    <img src="billboard.jpg" alt="Overlay Image">
     <div class="overlay-text" id="overlayText">Loading text...</div>
   </div>
 
